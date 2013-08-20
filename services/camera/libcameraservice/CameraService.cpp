@@ -909,11 +909,10 @@ void CameraService::loadSound() {
     property_get("persist.sys.camera-sound", value, "1");
     int enableSound = atoi(value);
 
-    if(enableSound) {
+    if (enableSound) {
         mSoundPlayer[SOUND_SHUTTER] = newMediaPlayer("/system/media/audio/ui/camera_click.ogg");
         mSoundPlayer[SOUND_RECORDING] = newMediaPlayer("/system/media/audio/ui/VideoRecord.ogg");
-    }
-    else {
+    } else {
         mSoundPlayer[SOUND_SHUTTER] = NULL;
         mSoundPlayer[SOUND_RECORDING] = NULL;
     }
